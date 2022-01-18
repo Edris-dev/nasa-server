@@ -37,7 +37,8 @@ function updateDb(req,res,err){
   }
 
 }
+const PORT = process.env.PORT || 3000;
 
-app.listen(3005, () =>{
-  console.log("Server listening at http://localhost:3005");
+app.listen(PORT, () =>{
+  console.log(S`erver is listening on port ${PORT}` );
 });
