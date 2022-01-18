@@ -10,9 +10,12 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req,res) => {res.send("working!")});
 app.get('/userInfo', getDb);
 app.post('/update', updateDb);
 app.post('/remove', fixDb);
+
+
 
 function fixDb(req,res,err){
   let delCard = req.body.removedCard;
